@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build --prefix-links && node deploy.js"
+    "build": "gatsby build --prefix-links",
+    "deploy": "node deploy.js",
+    "gh-pages": "npm run build && npm run deploy"
   },
   "keywords": [
     "gatsby"
